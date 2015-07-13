@@ -62,7 +62,6 @@ int main()
 	int tweet_number;
 	int tweet_length;
 	int list_count;
-	int unique_count;
 
 	//Open files for input and output.
 	input_file.open("./tweet_input/tweets.txt");
@@ -147,6 +146,7 @@ int countwords(string * tweet_words, string * unique_words, int * word_count, in
 
 	//If the list is empty, assign a first element.
 	if (list_count == 0)
+	{
 		if (tweet_length == 0)
 			return 0;
 		else
@@ -156,6 +156,7 @@ int countwords(string * tweet_words, string * unique_words, int * word_count, in
 			word_count[list_count - 1] = 1;
 			++start_value;
 		}
+	}
 
 	for (i = start_value; i < tweet_length; i++)
 	{
@@ -172,6 +173,7 @@ int countwords(string * tweet_words, string * unique_words, int * word_count, in
 			}
 		}
 		if (!(is_same))
+		{
 			if (list_count < MAX_WORDS)
 			{
 				++list_count;
@@ -180,6 +182,7 @@ int countwords(string * tweet_words, string * unique_words, int * word_count, in
 			}
 			else
 				cout << "Error in countwords(): The list of unique words has exceeded the program capacity of " << MAX_WORDS << ".\nResults may be inaccurate.\n";
+		}
 	}
 
 	return list_count;
