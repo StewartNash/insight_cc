@@ -52,17 +52,17 @@ int main()
 	int list_count;
 	int temp_count;
 
-	input_file.open("tweet_input\\tweets.txt");
+	input_file.open("tweet_input/tweets.txt");
 	if (!input_file.is_open())
 	{
-		cout << "Unable to open input file: tweet_input\\tweets.txt";
+		cout << "Unable to open input file: tweet_input/tweets.txt\n";
 		return 0;
 	}
 
-	output_file_2.open("tweet_output\\ft2.txt");
+	output_file_2.open("tweet_output/ft2.txt");
 	if (!output_file_2.is_open())
 	{
-		cout << "Unable to open output file: tweet_output\\ft2.txt";
+		cout << "Unable to open output file: tweet_output/ft2.txt\n";
 		return 0;
 	}
 
@@ -96,10 +96,10 @@ int main()
 
 	output_file_2.close();
 
-	output_file_1.open("tweet_output\\ft1.txt");
+	output_file_1.open("tweet_output/ft1.txt");
 	if (!output_file_1.is_open())
 	{
-		cout << "Unable to open output file: tweet_output\\ft1.txt";
+		cout << "Unable to open output file: tweet_output/ft1.txt\n";
 		return 0;
 	}
 
